@@ -1,11 +1,11 @@
 - name: using survey for filling this variables
   hosts: all
   tasks:
-  - name: creating user
+  - name: creating user {{ user_name }}
     ansible.builtin.user: 
      name: "{{ user_name }}"
      state: present
-  - name: installing package
+  - name: installing package {{ pkg_name }}
     ansible.builtin.dnf:
      name: "{{ pkg_name }}"
      state: latest
