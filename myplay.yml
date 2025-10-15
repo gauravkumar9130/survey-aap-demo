@@ -5,7 +5,7 @@
     ansible.builtin.user: 
      name: "{{ user_name }}"
      state: present
- - name: installing package
-   ansible.builtin.dnf:
+  - name: installing package
+    ansible.builtin.dnf:
      name: "{{ pkg_name }}"
      state: latest
